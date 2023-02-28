@@ -4,5 +4,5 @@ def view():
         text = ntbk.readlines()
         for ln in text:
             print(ln)
-        print('\n')
+        # print('\n')
     pass

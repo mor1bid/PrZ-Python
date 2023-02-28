@@ -10,7 +10,13 @@ def delete():
         print('\nВыполнено!\n')
     elif move == 'n':
         targ = input('Введите номер желаемой заметки: ')
-
+        with open('ntbk.txt', 'r', encoding='UTF-8') as ntbk:
+            text = ntbk.readlines()
+            with open('ntbk.txt', 'w', encoding='UTF-8') as ntbk:
+                ntbk.seek(0)
+                for ln in text:
+                    if targ not in ln:
+                        ntbk.write(ln)
         print('\nВыполнено!\n')
     elif move == 'c':
         print('\nВыполнено!\n')
