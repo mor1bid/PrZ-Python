@@ -5,4 +5,5 @@ def edit():
         for ln in ntbk:
             if targ in ln:
                 ntext = input('Введите заметку:\n')
+    ntbk.close()
     pass
